@@ -15,6 +15,41 @@ FSJS project 1 - A Random Quote Generator
     - Add at least one `year` and/or `citation` property to at least one 
       quote object.
 ***/
+let quotes = [
+  {
+    quote: 'Life is 10% what happens to you and 90% how you react to it.',
+    source: 'Charles R. Swindoll',
+    year: '1961'
+  },
+  {
+    quote: 'With the new day comes new strength and new thoughts.',
+    source: 'Eleanor Roosevelt',
+  },
+  {
+    quote: 'Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.',
+    source: 'Hellen Keller',
+  },
+  {
+    quote: 'Failure will never overtake me if my determination to succeed is strong enough.',
+    source: 'Og Mandino',
+  },
+  {
+    quote: 'It always seems impossible until it\'s done.',
+    source: 'Nelson Mandela',
+  },
+  {
+    quote: 'Set your goals high, and don\'t stop till you get there.',
+    source: 'Bo Jackson',
+  },
+  {
+    quote: 'If you can dream it, you can do it.',
+    source: 'Walt Disney',
+  },
+  {
+    quote: 'If you want to conquer fear, don\'t sit home and think about it. Go out and get busy.',
+    source: 'Dale Carnegie',
+  },
+]
 
 
 
