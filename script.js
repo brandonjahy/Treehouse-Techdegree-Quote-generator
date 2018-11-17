@@ -15,7 +15,7 @@ FSJS project 1 - A Random Quote Generator
     - Add at least one `year` and/or `citation` property to at least one 
       quote object.
 ***/
-let quotes = [
+const quotes = [
   {
     quote: 'Life is 10% what happens to you and 90% how you react to it.',
     source: 'Charles R. Swindoll',
@@ -61,9 +61,12 @@ let quotes = [
    - use the random number to `return` a random quote object from the 
      `quotes` array.
 ***/
+function getRandomQuote(quotes) {
+  var num = Math.floor( Math.random() * 7) + 1;
+  return quotes[num];
+}
 
-
-
+console.log( getRandomQuote());
 
 /***
   Create the `printQuote` function to: 
