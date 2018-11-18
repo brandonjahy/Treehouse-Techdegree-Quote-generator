@@ -61,13 +61,21 @@ const quotes = [
    - use the random number to `return` a random quote object from the 
      `quotes` array.
 ***/
-function getRandomQuote(array) {
-  var num = Math.floor( Math.random() * array.length) + 1;
-  return quotes[num].quote;
+function getRandomQuote() {
+  let num = Math.floor( Math.random() * quotes.length) + 1;
+  return quotes[num];
 }
 
-console.log( getRandomQuote(quotes));
+//generates random color
+function getRandomColor() {
+  let randomColor;
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')'; 
 
+  return randomColor;
+}
 /***
   Create the `printQuote` function to: 
    - call the `getRandomQuote` function and assign it to a variable.
@@ -79,11 +87,17 @@ console.log( getRandomQuote(quotes));
 ***/
 
 function printQuote() {
-  var randomQuote = getRandomQuote();
-  
+  let currentQuote = getRandomQuote();
+  let changeColor = getRandomColor();
+  let html = '<p class="quote"> ' + currentQuote.quote + '</p>';
+  html += '<p class="source">' + currentQuote.source;
+
+  document.getElementById("quote-box").innerHTML = html;
+  document.body.style.background = changeColor.background;
+  document.getElementById("loadQuote").style.background = changeColor.button;
 }
 
-
+printQuote();
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
