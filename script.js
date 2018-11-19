@@ -66,16 +66,7 @@ function getRandomQuote() {
   return quotes[num];
 }
 
-//generates random color
-function getRandomColor() {
-  let randomColor;
-  let red = Math.floor(Math.random() * 256);
-  let green = Math.floor(Math.random() * 256);
-  let blue = Math.floor(Math.random() * 256);
-  randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')'; 
 
-  return randomColor;
-}
 /***
   Create the `printQuote` function to: 
    - call the `getRandomQuote` function and assign it to a variable.
@@ -88,13 +79,10 @@ function getRandomColor() {
 
 function printQuote() {
   let currentQuote = getRandomQuote();
-  let changeColor = getRandomColor();
   let html = '<p class="quote"> ' + currentQuote.quote + '</p>';
   html += '<p class="source">' + currentQuote.source;
 
   document.getElementById("quote-box").innerHTML = html;
-  document.body.style.background = changeColor.background;
-  document.getElementById("loadQuote").style.background = changeColor.button;
 }
 
 printQuote();
